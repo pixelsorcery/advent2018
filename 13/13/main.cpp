@@ -145,7 +145,8 @@ int main()
                     {
                         if (collision == false)
                         {
-                            cout << trains[j].x << "," << trains[j].y << endl;
+                            // part 1
+                            cout << "part1: " <<trains[j].x << "," << trains[j].y << endl;
                             collision = true;
                         }
                         crashed += 2;
