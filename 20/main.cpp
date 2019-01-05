@@ -57,7 +57,7 @@ int processString(string& s)
                 curLevel--;
             }
 
-            cout << s[i] << " " << curLevel << " " << x << ", " << y << endl;
+            //cout << s[i] << " " << curLevel << " " << x << ", " << y << endl;
 
             if (curLevel > answer)
             {
@@ -66,7 +66,7 @@ int processString(string& s)
         }
         else if (s[i] == '(')
         {
-            cout << "push " << curLevel << endl;
+            //cout << "push " << curLevel << endl;
             stacknode n;
             n.val = curLevel;
             n.x = x;
@@ -113,18 +113,13 @@ int main()
     string test2 = "^WSSEESWWWNW(S|NENNEEEENN(ESSSSW(NWSW|SSEN)|WSWWN(E|WWS(E|SS))))$";
     assert(31 == processString(test2));
     string test3 = "^ENNWSWW(NEWS|)SSSEEN(WNSE|)EE(SWEN|)NNN$";
-//    assert(18 == processString(test3));
+    assert(18 == processString(test3));
 
     string input;
     cin >> input;
     int answer = processString(input);
 
-    cout << answer << endl;
+    //cout << answer << endl;
 
     return 0;
 }
-
-//2771 too low
-//3646 too high
-//
-//8520 too low
